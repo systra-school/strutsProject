@@ -15,9 +15,11 @@
 			年齢：<html:text property="age" /><br/>
 			<html:submit value="GO" />
 		</html:form>
+		<hr>
 		<html:form method="post" action="action8-2.do">
 			何もないけど取り敢えず
 			<html:submit value="GO" />
 		</html:form>
+		<hr>
 	</body>
 </html:html>

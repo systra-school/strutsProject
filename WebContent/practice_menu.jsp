@@ -15,21 +15,29 @@
 				<html:link action="/p1">次画面へ</html:link>
 			</li>
 		</ul>
+		<hr>
+		<!--  -->
 		<form action="http://localhost:8080/struts-test/action1.do" method="post">
 			<input type="text" name="MSG" value="${error}">
 			<input type="submit" value="ok">
 		</form>
+		<hr>
+		<!--  -->
+		<!-- 
 		<html:form method="post" action="action3.do">
 			<label for="text01">入力１</label>
 			<html:text property="text1" styleId="text01" /><br />
 			<label for="text02">入力２</label>
 			<html:text property="text2" styleId="text02" /><br />
-			<!-- -->
+			
 			<label for="text03">入力３(必須)</label>
 			<html:text property="text3" styleId="text03" /><span style="color:red">${error2}</span><br />
-			<!-- -->
+			
 			<html:submit>OK</html:submit>
 		</html:form>
+		<hr>
+		-->
+		<!-- 
 		<html:form method="post" action="action4.do">
 			<label for="text">テキスト</label>
 			<html:text property="text" styleId="text" /><br />
@@ -41,6 +49,9 @@
 			<html:hidden property="hidden" value="hoge" /><br />
 			<html:submit>OK</html:submit>
 		</html:form>
+		<hr>
+		 -->
+		<!-- 
 		<html:form method="post" action="action5.do">
 			得意な言語：
 			<html:checkbox property="cbLang1">Java</html:checkbox>
@@ -73,6 +84,9 @@
 			「Shift」押しながらクリックすると複数選択可能<br />
 			<html:submit property="subBtn" value="ok"/>
 		</html:form>
+		<hr>
+		 -->
+		<!-- 
 		<html:form method="post" action="action5a.do">
 			<label for="name">氏名：</label>
 			<html:text property="name" styleId="name" /><br />
@@ -98,7 +112,7 @@
 			<html:checkbox property="factor4" value="薬を処方されている">薬を処方されている</html:checkbox><br />
 			<html:submit>OK</html:submit>
 		</html:form>
-		<!-- 
+		<hr>
 		 -->
 		<script type="text/javascript">
 
