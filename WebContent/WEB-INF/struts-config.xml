@@ -44,6 +44,7 @@
 	<form-bean
 		name="testform"
 		type="form.TestActionForm" />
+	<!-- 動かしてみよう③ -->
 	<form-bean
 		name="prac3form"
 		type="form.Practice3ActionForm" />
@@ -108,40 +109,45 @@
 		type="action.TestAction">
 	<forward name="res" path="/result.jsp" />
 	</action>
+	<!-- 動かしてみよう① -->
 	<action
 		path="/prac"
 		forward="/practice_menu.jsp" />
 	<action
 		path="/p1"
 		forward="/pages/practice1.jsp" />
-
-	<!-- action処理 -->
+	<!-- 動かしてみよう② -->
 	<action path="/action1" type="action.Practice2Action" >
 		<forward name="p1" path="/pages/practice1.jsp"/>
-		<forward name="prac" path="/practice_menu.jsp"/>
+		<forward name="prac" path="/practice_menu.jsp"/><!-- 課題２ -->
 	</action>
+	<!-- 動かしてみよう③ -->
 	<action path="/action3" name="prac3form" type="action.Practice3Action" >
 		<forward name="p3" path="/pages/practice3.jsp"/>
-		<forward name="prac" path="/practice_menu.jsp"/>
+		<forward name="prac" path="/practice_menu.jsp"/><!-- 課題３ -->
 	</action>
+	<!-- 動かしてみよう④ -->
 	<action path="/action4" name="prac4form" type="action.Practice4Action" >
 		<forward name="p4" path="/pages/practice4.jsp"/>
 	</action>
+	<!-- 課題４ -->
 	<action path="/login" name="loginform" type="action.LoginAction" >
 		<forward name="success" path="/pages/loginSuccess.jsp"/>
 		<forward name="false" path="/login.jsp"/>
 	</action>
+	<!-- 動かしてみよう⑤ -->
 	<action path="/action5" name="prac5form" type="action.Practice5Action">
 		<forward name="prac" path="/practice_menu.jsp"/>
 		<forward name="p5" path="/pages/practice5.jsp" />
 	</action>
+	<!-- 課題５ -->
 	<action path="/action5a" name="prac5aform" type="action.Practice5aAction">
 		<forward name="prac" path="/practice_menu.jsp"/>
 		<forward name="p5a" path="/pages/practice5a.jsp" />
 	</action>
 	<action
 		path="/p5b"
-		forward="/pages/practice5a.jsp"/>
+		forward="/pages/practice5b.jsp"/>
 
 	<action path="/body" name="bodyform" type="action.BodyAction">
 		<forward name="prac" path="/practice_menu.jsp"/>

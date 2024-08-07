@@ -4,10 +4,10 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>次画面</title>
+		<title>送信完了画面</title>
 	</head>
 	<body>
-		<h1>次画面きた！</h1>
-		<html:link action="prac.do"><button type="button" >戻る</button></html:link>
+		<h1>送信完了画面</h1>
+		送信しました！
 	</body>
 </html>

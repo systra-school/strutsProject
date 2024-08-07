@@ -26,7 +26,7 @@
 			<label for="jibyo">持病</label>
 			<html:radio property="jibyo" value="あり">あり</html:radio>
 			<html:radio property="jibyo" value="なし">なし</html:radio><br />
-			<html:textarea property="jibyoArea" styleId="jibyoarea" /><br />
+			<html:textarea property="jibyoArea" styleId="jibyoArea" /><br />
 			<br />
 			<label for="job">職業</label>
 			<html:select property="job" size="3">
@@ -35,66 +35,16 @@
 			<html:option value="3">自営業</html:option>
 			</html:select><br />
 			<label for="factor">当てはまるもの全て選択してください。</label><br />
-			<html:checkbox property="factor" value="1">タバコを吸う</html:checkbox>
-			<html:checkbox property="factor" value="2">お酒を飲む</html:checkbox>
-			<html:checkbox property="factor" value="3">妊娠している（女性のみ）</html:checkbox>
-			<html:checkbox property="factor" value="4">薬を処方されている</html:checkbox>
+			<html:checkbox property="factor" value="タバコを吸う">タバコを吸う</html:checkbox>
+			<html:checkbox property="factor" value="お酒を飲む">お酒を飲む</html:checkbox>
+			<html:checkbox property="factor" value="妊娠している（女性のみ）">妊娠している（女性のみ）</html:checkbox>
+			<html:checkbox property="factor" value="薬を処方されている">薬を処方されている</html:checkbox>
 			<span style="color:red">${error}</span><br />
 			<html:submit styleId="ok">OK</html:submit>
-			<button type="button" id="reset">RESET</button>
+			<html:button property="reset" styleId="reset">RESET</html:button>
 		</html:form>
 </div>
 <script src="js/body.js">
-
-	const ok = document.querySelector('#ok');
-	const jibyo = document.querySelector('#jibyo');
-	const jibyoArea = document.querySelector('#jibyoArea');
-	const pass = document.querySelector('#pass');
-	const reset = document.querySelector('#reset');
-	let cnt = 0;
-
-	// 初期表示時
-	window.addEventListener('DOMContentLoaded', function(){
-		jibyoArea.disabled=true;
-		${error = null}
-		inputCheck(account.value);
-		inputCheck(pass.value);
-	})
-
-	//リセットボタン押下時
-	reset.addEventListener('click', function() {
-		account.value = '';
-		pass.value = '';
-		inputCheck(account.value);
-		inputCheck(pass.value);
-	});
-	// アカウントフォーカスアウト時
-	account.addEventListener('blur', function(){
-		inputCheck(this.value)
-	})
-	// パスワードフォーカスアウト時
-	pass.addEventListener('blur', function(){
-		inputCheck(this.value)
-	})
-	// フォーム入力チェック処理
-	const inputCheck = function(value) {
-		if(value == null || value == "") {
-			cnt--;
-			if(cnt < 0) { //入力欄が空なのにさらにフォーカス外れたとき
-				cnt = 0;
-			}
-		}else {
-			cnt++;
-			if(cnt > 2) { //入力欄に値が入っているのにさらにフォーカス外れたとき
-				cnt = 2;
-			}
-		}
-		if(cnt >= 2) {
-			jibyoArea.disabled = false;
-		}else {
-			jibyoArea.disabled = true;
-		}
-	};
 </script>
 </body>
 </html:html>

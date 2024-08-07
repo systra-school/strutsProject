@@ -65,6 +65,7 @@
 				cnt = 2;
 			}
 		}
+		//ok.disabled = (cnt >= 2);
 		if(cnt >= 2) {
 			ok.disabled = false;
 		}else {

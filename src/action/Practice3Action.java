@@ -17,7 +17,9 @@ public class Practice3Action extends Action {
 			HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 
+		// ActionFormを取得
 		Practice3ActionForm pra3Form = (Practice3ActionForm)form;
+		// ActionFormの各要素をrequestに格納
 		request.setAttribute("text1", pra3Form.getText1());
 		request.setAttribute("text2", pra3Form.getText2());
 		request.setAttribute("text3", pra3Form.getText3());
@@ -26,6 +28,7 @@ public class Practice3Action extends Action {
 		String strForward = "p3"; // デフォルト値
 		String error = "";
 
+		// 課題③：追加した入力欄が空の場合、エラーメッセージをを表示
 		if(str == null || str.equals("")){
 			strForward = "prac"; // 入力が空白の場合、元のページを再表示
 			error = "必須入力です！";

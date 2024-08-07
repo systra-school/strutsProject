@@ -12,6 +12,7 @@
 			<span style="font-size:20pt;">${requestScope.text1}</span><br />
 			<span style="font-size:20pt;">${requestScope.text2}</span><br />
 			<!-- -->
+			<%-- 課題３：追加入力欄の表示 --%>
 			<span style="font-size:20pt; color:red;">${requestScope.text3}</span><br />
 			<!-- -->
 		</div>
