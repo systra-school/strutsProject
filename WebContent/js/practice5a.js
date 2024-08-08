@@ -1,5 +1,10 @@
 
+// practice_menu5a.jspのform要素を取得
 const ok = document.querySelector('#ok');
+const name = document.querySelector('#name');
+const yomi = document.querySelector('#yomi');
+const height = document.querySelector('#height');
+const weight = document.querySelector('#weight');
 const jibyo = document.querySelector('#jibyo');
 const jibyoArea = document.querySelector('#jibyoArea');
 const pass = document.querySelector('#pass');
@@ -40,3 +45,26 @@ const inputCheck = function(value) {
 		jibyoArea.disabled = true;
 	}
 };
+
+// OKボタン押下時に入力チェック
+function shiftMstMntRegister() {
+	document.forms[0].submit();
+};
+// 半角ｶﾅチェック
+function checkHankakuKana(str) {
+	// 引数の文字列が半角ｶﾅのみで構成されていればtrue
+    if (str.match(/^[\uFF61-\uFF9F]*$/)) {
+        return true;
+    }
+    // そうでないならfalse
+    return false;
+}
+// 数値チェック
+function checkNumber(str) {
+	// 引数の文字列が半角ｶﾅのみで構成されていればtrue
+    if (str.match(/+(?:\.\d+)?/)) {
+        return true;
+    }
+    // そうでないならfalse
+    return false;
+}

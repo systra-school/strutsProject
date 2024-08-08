@@ -19,18 +19,20 @@
 					<div class="col-sm-5">
 						<div>開発部に追加する従業員を選択してください！</div>
 						<html:select property="empSelect" size="5" style="width: 150px;">
+							<%-- dataListからempDataArrをセレクトボックス内に表示 --%>
 							<html:options name="dataList" labelName="dataList" property="empDataArr" labelProperty="empDataArr"/>
 						</html:select>
 					</div>
 					<div class="col-sm-2" style="display: lfex; justify-content: center; align-items:center;">
 						<div><html:submit property="mode" value="追加&gt;"/></div>
-						<!-- <div><html:submit property="mode" value="&lt;削除"/></div> -->
+						<%-- <div><html:submit property="mode" value="&lt;削除"/></div> --%>
 					</div>
 					<div class="col-sm-5">
 						<html:select property="addSelect" size="5" style="width: 150px;">
+							<%-- dataListからaddSelectをセレクトボックス内に表示 --%>
 							<html:options name="dataList" labelName="dataList" property="values" labelProperty="values"/>
-						</html:select>
-						<span>${deleteMsg}</span><br />
+						</html:select><br />
+						<span><bean:message name="dataList" property="removeMsg"/></span>
 					</div>
 				</div>
 				<bean:message name="dataList" property="resultMsg"/>

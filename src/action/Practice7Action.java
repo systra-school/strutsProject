@@ -19,13 +19,15 @@ public class Practice7Action extends Action {
 		ActionForm form,
 		HttpServletRequest request,
 		HttpServletResponse response) throws Exception {
+		
+		// ActionFormを取得
 		Practice7ActionForm prac7form = (Practice7ActionForm)form;
 
 		// dataListをsessionから取得
 		HttpSession session = request.getSession();
 		Practice7DataList dataList = (Practice7DataList)session.getAttribute("dataList");
 
-		// 初回起動時はdataListを生成
+		// sessionからdataListを取得できない場合(=初回起動時)はdataListを生成
 		if(dataList == null){
 			dataList = new Practice7DataList();
 		}
@@ -34,7 +36,7 @@ public class Practice7Action extends Action {
 		String addData = ""; // 追加用データ(左のselect)
 		String delData = ""; // 削除用データ(右のselect)
 
-		/* 初回動作ではActionFormが生成されていないので回避 */
+//		// 初回動作ではActionFormが生成されていないので回避
 //		if(prac7form.getMode() != null || prac7form.getMode().equals("")) {
 //			for(String entity : dataList.getValues()) {
 //
@@ -42,15 +44,17 @@ public class Practice7Action extends Action {
 //		}
 
 		// 画面操作がされていない場合
+		String mode = "";
 		if(prac7form != null){
 			addData = prac7form.getEmpSelect();
 			delData = prac7form.getAddSelect();
+			mode = prac7form.getMode(); // submitボタンの文字を取得
 		}else{
 			dataList.setResultMsg("NONE");	// 追加ボタンを押下してください！
 		}
-		dataList.setRemoveMsg("DEFAULT");
+		// 削除欄に初期メッセージを表示
+		dataList.setRemoveMsg("NONE");
 		// 追加/削除処理
-		String mode = prac7form.getMode();
 		if(mode.equals("追加>")) {
 			// 追加処理
 			if(addData != null && !addData.equals("")){

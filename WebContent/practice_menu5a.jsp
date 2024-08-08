@@ -6,12 +6,13 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<title>入力画面</title>
+<title>アンケート情報画面</title>
 </head>
 <body>
+<%-- 課題５：複数項目のフォームのバリデーションチェック --%>
 <div class="container">
-<h1>ログイン画面</h1>
-		<html:form method="post" action="body.do">
+<h1>メニュー画面</h1>
+		<html:form method="post" action="action5a.do">
 			<label for="name">氏名</label>
 			<html:text property="name" styleId="name" /><br />
 			<label for="yomi">ヨミガナ</label>
@@ -40,11 +41,10 @@
 			<html:checkbox property="factor" value="妊娠している（女性のみ）">妊娠している（女性のみ）</html:checkbox>
 			<html:checkbox property="factor" value="薬を処方されている">薬を処方されている</html:checkbox>
 			<span style="color:red">${error}</span><br />
-			<html:submit styleId="ok">OK</html:submit>
+			<html:submit styleId="ok" onclick="">OK</html:submit>
 			<html:button property="reset" styleId="reset">RESET</html:button>
 		</html:form>
 </div>
-<script src="js/body.js">
-</script>
+<script src="js/practice5a.js"></script>
 </body>
 </html:html>

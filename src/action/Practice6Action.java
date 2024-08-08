@@ -15,6 +15,7 @@ public class Practice6Action extends Action {
 								  HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		Practice6ActionForm prac6form = (Practice6ActionForm)form;
+		// ActionFormをそのままrequestに格納
 		request.setAttribute("prac6form", prac6form);
 		return mapping.findForward("p6");
 	}

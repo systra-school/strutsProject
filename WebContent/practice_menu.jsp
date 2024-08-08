@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<h1>メニュー画面</h1>
-		<%-- 動かしてみよう：画面の遷移 --%>
+		<%-- 動かしてみよう①：画面の遷移 --%>
 		<ul>
 			<li>
 				<%-- action属性の属性値追加はsturts-config.xmlで行う --%>
@@ -90,34 +90,6 @@
 			<br />
 			「Shift」押しながらクリックすると複数選択可能<br />
 			<html:submit property="subBtn" value="ok"/>
-		</html:form>
-		<hr>
-		 -->
-		<!-- 
-		<html:form method="post" action="action5a.do">
-			<label for="name">氏名：</label>
-			<html:text property="name" styleId="name" /><br />
-			<label for="yomi">よみ：</label>
-			<html:text property="yomi" styleId="yomi" /><br />
-			身長：
-			<html:radio property="height" value="100～120cm">100～120cm</html:radio>
-			<html:radio property="height" value="121～160cm">121～160cm</html:radio>
-			<html:radio property="height" value="161～200cm">161～200cm</html:radio><br />
-			<label for="weight">体重：</label>
-			<html:text property="weight" styleId="weight" />kg<br />
-			持病：
-			<html:radio property="jibyo" value="true">あり</html:radio>
-			<html:radio property="jibyo" value="false">なし</html:radio><br />
-			<label for="jibyoName">持病「あり」を選択した方は詳しい病名：</label>
-			<html:textarea property="jibyoName" styleId="jibyoName" /><br />
-			<label for="job">職業：</label>
-			<html:text property="job" styleId="job" /><br />
-			当てはまるものをすべて選択しなさい：
-			<html:checkbox property="factor1" value="タバコを吸う">タバコを吸う</html:checkbox>
-			<html:checkbox property="factor2" value="お酒を飲む">お酒を飲む</html:checkbox>
-			<html:checkbox property="factor3" value="妊娠している">妊娠している</html:checkbox>
-			<html:checkbox property="factor4" value="薬を処方されている">薬を処方されている</html:checkbox><br />
-			<html:submit>OK</html:submit>
 		</html:form>
 		<hr>
 		 -->

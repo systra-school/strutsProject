@@ -60,9 +60,6 @@
 	<form-bean
 		name="prac5aform"
 		type="form.Practice5aActionForm" />
-	<form-bean
-		name="bodyform"
-		type="form.BodyActionForm" />
 		<form-bean
 		name="prac6form"
 		type="form.Practice6ActionForm" />
@@ -141,37 +138,37 @@
 		<forward name="p5" path="/pages/practice5.jsp" />
 	</action>
 	<!-- 課題５ -->
+	<action path="/prac5a" forward="/practice_menu5a.jsp" />
 	<action path="/action5a" name="prac5aform" type="action.Practice5aAction">
-		<forward name="prac" path="/practice_menu.jsp"/>
-		<forward name="p5a" path="/pages/practice5a.jsp" />
+		<forward name="p5a" path="/pages/practice5a.jsp"/>
+		<forward name="prac5a" path="/practice_menu5a.jsp" />
 	</action>
 	<action
 		path="/p5b"
 		forward="/pages/practice5b.jsp"/>
-
-	<action path="/body" name="bodyform" type="action.BodyAction">
-		<forward name="prac" path="/practice_menu.jsp"/>
-		<forward name="p5" path="/pages/practice5.jsp" />
-	</action>
+	<!-- 動かしてみよう⑥ -->
 	<action
-		path="/prac2"
-		forward="/practice_menu2.jsp"/>
+		path="/prac6"
+		forward="/practice_menu6.jsp"/>
 	<action
 		path="/action6"
 		name="prac6form"
 		type="action.Practice6Action">
 		<forward name="p6" path="/pages/practice6.jsp" />
 	</action>
+	<!-- 動かしてみよう⑥ -->
+	<!-- practice_menu7.jspは初期値がないと表示できない -->
+	<!-- http://localhost:8080/struts-test/prac7.do -->
 	<action
-		path="/prac7"
+		path="/prac7" 
 		type="action.Practice7Action">
-		<forward name="prac7" path="/practice_menu3.jsp" />
+		<forward name="prac7" path="/practice_menu7.jsp" />
 	</action>
 	<action
 		path="/action7"
 		name="prac7form"
 		type="action.Practice7Action">
-		<forward name="prac7" path="/practice_menu3.jsp" />
+		<forward name="prac7" path="/practice_menu7.jsp" />
 	</action>
 	<action
 		path="/prac8"
@@ -193,6 +190,7 @@
 
 <!-- ======================================== Message Resources Definitions -->
 
+	<!-- bean:messageで取り出すデータの参照元(srcフォルダ直下) -->
     <message-resources parameter="MessageResources" />
 
 

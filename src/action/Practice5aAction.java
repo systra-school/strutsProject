@@ -17,39 +17,18 @@ public class Practice5aAction extends Action {
 			HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 
-		Practice5aActionForm pra5aForm = (Practice5aActionForm)form;
-
-		String name = "";
-		name = pra5aForm.getName();
-		request.setAttribute("name", name);
-
-		String yomi = "";
-		yomi = pra5aForm.getYomi();
-		request.setAttribute("yomi", yomi);
-
-		String height = "";
-		height = pra5aForm.getHeight();
-		request.setAttribute("height", height);
-
-		String weight = "";
-		weight = pra5aForm.getWeight();
-		request.setAttribute("weight", weight);
-
-		String jibyo = "なし";
-		String jibyoName = "";
-		if(pra5aForm.getJibyo().equals("true")) {
-			jibyo = "あり";
-			jibyoName = pra5aForm.getJibyoName();
-			request.setAttribute("jibyoName", jibyoName);
-		}
-		request.setAttribute("jibyo", jibyo);
-
-		String job = "";
-		job = pra5aForm.getJob();
-		request.setAttribute("job", job);
-
+		// フォーム情報取得
+		Practice5aActionForm bodyForm = (Practice5aActionForm)form;
+		// フォーム情報をrequestに格納
+		request.setAttribute("name", bodyForm.getName());
+		request.setAttribute("yomi", bodyForm.getYomi());
+		request.setAttribute("height", bodyForm.getHeight());
+		request.setAttribute("weight", bodyForm.getWeight());
+		request.setAttribute("jibyo", bodyForm.getJibyo());
+		request.setAttribute("jibyoArea", bodyForm.getJibyoArea());
+		request.setAttribute("job", bodyForm.getJob());
 		StringBuffer sb = new StringBuffer();
-		String[] factor = pra5aForm.getFactor();
+		String[] factor = bodyForm.getFactor();
 		for(int i=0; i<factor.length; i++) {
 			if(factor[i]!=null && !factor[i].equals("")) {
 				sb.append(factor[i]);
@@ -58,7 +37,9 @@ public class Practice5aAction extends Action {
 		}
 		request.setAttribute("factor", sb.toString());
 
-		return mapping.findForward("p5a");
+		String strForward = "p5a"; // デフォルト値
+		
+		return mapping.findForward(strForward);
 	}
 
 }
