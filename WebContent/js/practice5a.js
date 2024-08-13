@@ -1,15 +1,16 @@
 
 // practice_menu5a.jspのform要素を取得
-const name = document.querySelector('#name');			// 氏名
-const kana = document.querySelector('#kana');			// カナ
-const height = document.querySelector('#height');		// 身長
-const weight = document.querySelector('#weight');		// 体重
-const jibyo = document.querySelector('#jibyo');			// 持病
-const jibyoArea = document.querySelector('#jibyoArea');	// 病名
-const job = document.querySelector('#job');				// 職業
-const factor = document.querySelector('#factor');		// 選択肢
-const ok = document.querySelector('#ok');				// OKボタン
-const reset = document.querySelector('#reset');			// リセットボタン
+const name = document.querySelector('#name');				// 氏名
+const kana = document.querySelector('#kana');				// カナ
+//const height = document.querySelector('#height');			// 身長
+const weight = document.querySelector('#weight');			// 体重
+const jibyo_ari = document.querySelector('#jibyo-ari');		// 持病あり
+const jibyo_nashi = document.querySelector('#jibyo-nashi');	// 持病なし
+const jibyoArea = document.querySelector('#jibyoArea');		// 病名
+//const job = document.querySelector('#job');				// 職業
+const factor = document.querySelector('#factor');			// 選択肢
+const ok = document.querySelector('#ok');					// OKボタン
+const reset = document.querySelector('#reset');				// リセットボタン
 let cnt = 0;
 
 // 初期表示時
@@ -26,12 +27,12 @@ reset.addEventListener('click', function() {
 	inputCheck(pass.value);
 });
 
-//持病選択時
-jibyo.addEventListener('click', function() {
+//持病あり選択時
+jibyo-ari.addEventListener('click', function() {
 	inputCheck(this.value);
 });
 
-// 持病フォーカスアウト時
+// 持病ありフォーカスアウト時
 jibyo.addEventListener('blur', function(){
 	inputCheck(this.value)
 });

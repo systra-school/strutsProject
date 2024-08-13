@@ -26,12 +26,12 @@
 			<html:radio property="height" value="5">180cm ～ 200cm</html:radio><br />
 			<br />
 			<label for="jibyo">持病</label>
-			<html:radio styleId="jibyo" property="jibyo" value="あり">あり</html:radio>
-			<html:radio styleId="jibyo" property="jibyo" value="なし">なし</html:radio><br />
+			<html:radio styleId="jibyo-ari" property="jibyo" value="あり">あり</html:radio>
+			<html:radio styleId="jibyo-nashi" property="jibyo" value="なし">なし</html:radio><br />
 			<html:textarea property="jibyoArea" styleId="jibyoArea" /><br />
 			<br />
 			<label for="job">職業</label>
-			<html:select property="job" size="3">
+			<html:select property="job" size="3" styleId="job">
 			<html:option value="1">会社員</html:option>
 			<html:option value="2">公務員</html:option>
 			<html:option value="3">自営業</html:option>
