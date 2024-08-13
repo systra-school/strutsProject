@@ -8,19 +8,19 @@ import org.apache.struts.action.ActionMapping;
 public class Practice5aActionForm extends ActionForm {
 
 	private String name;		// 名前
-	private String yomi;		// ヨミ
+	private String kana;		// ヨミ
 	private String height;		// 身長
 	private String weight;		// 体重
 	private String jibyo;		// 持病
-	private String jibyoArea;	// 
-	private String job;
-	private String[] factor;
+	private String jibyoArea;	// 病名
+	private String job;			// 職業
+	private String[] factor;	// 選択肢
 	/* コンストラクタ */
 	public Practice5aActionForm() {}
 
 	// getter
 	public String getName() { return name; }
-	public String getYomi() { return yomi; }
+	public String getKana() { return kana; }
 	public String getHeight() { return height; }
 	public String getWeight() { return weight; }
 	public String getJibyo() { return jibyo; }
@@ -29,7 +29,7 @@ public class Practice5aActionForm extends ActionForm {
 	public String[] getFactor() {return factor; }
 	// setter
 	public void setName(String name) { this.name = name; }
-	public void setYomi(String yomi) { this.yomi = yomi; }
+	public void setKana(String yomi) { this.kana = kana; }
 	public void setHeight(String height) { this.height = height; }
 	public void setWeight(String weight) { this.weight = weight; }
 	public void setJibyo(String jibyo) { this.jibyo = jibyo; }
@@ -42,15 +42,11 @@ public class Practice5aActionForm extends ActionForm {
 	public void reset(ActionMapping mapping,
 			HttpServletRequest request){
 			this.setName("");
-			this.setYomi("");
+			this.setKana("");
 			this.setHeight("");
 			this.setJibyo("");
 			this.setJibyoArea("");
 			this.setJob("");
 			this.setFactor(new String[0]);
 	}
-
-
-
-
 }

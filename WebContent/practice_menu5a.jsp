@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <title>アンケート情報画面</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <%-- 課題５：複数項目のフォームのバリデーションチェック --%>
@@ -15,10 +16,10 @@
 		<html:form method="post" action="action5a.do">
 			<label for="name">氏名</label>
 			<html:text property="name" styleId="name" /><br />
-			<label for="yomi">ヨミガナ</label>
-			<html:text property="yomi" styleId="yomi" /><br />
+			<label for="kana">ヨミガナ</label>
+			<html:text property="kana" styleId="kana" /><br />
 			<label for="height">身長</label><br />
-			<html:radio property="height" value="1">100cm ～ 120cm</html:radio><br />
+			<html:radio property="height" value="1" checked>100cm ～ 120cm</html:radio><br />
 			<html:radio property="height" value="2">120cm ～ 140cm</html:radio><br />
 			<html:radio property="height" value="3">140cm ～ 160cm</html:radio><br />
 			<html:radio property="height" value="4">160cm ～ 180cm</html:radio><br />
@@ -26,7 +27,7 @@
 			<br />
 			<label for="jibyo">持病</label>
 			<html:radio property="jibyo" value="あり">あり</html:radio>
-			<html:radio property="jibyo" value="なし">なし</html:radio><br />
+			<html:radio property="jibyo" value="なし" checked>なし</html:radio><br />
 			<html:textarea property="jibyoArea" styleId="jibyoArea" /><br />
 			<br />
 			<label for="job">職業</label>
@@ -41,7 +42,7 @@
 			<html:checkbox property="factor" value="妊娠している（女性のみ）">妊娠している（女性のみ）</html:checkbox>
 			<html:checkbox property="factor" value="薬を処方されている">薬を処方されている</html:checkbox>
 			<span style="color:red">${error}</span><br />
-			<html:submit styleId="ok" onclick="">OK</html:submit>
+			<html:submit styleId="ok" onclick="prac5aRagister()">OK</html:submit>
 			<html:button property="reset" styleId="reset">RESET</html:button>
 		</html:form>
 </div>

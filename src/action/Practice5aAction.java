@@ -18,17 +18,17 @@ public class Practice5aAction extends Action {
 			HttpServletResponse response) throws Exception {
 
 		// フォーム情報取得
-		Practice5aActionForm bodyForm = (Practice5aActionForm)form;
+		Practice5aActionForm prac5Form = (Practice5aActionForm)form;
 		// フォーム情報をrequestに格納
-		request.setAttribute("name", bodyForm.getName());
-		request.setAttribute("yomi", bodyForm.getYomi());
-		request.setAttribute("height", bodyForm.getHeight());
-		request.setAttribute("weight", bodyForm.getWeight());
-		request.setAttribute("jibyo", bodyForm.getJibyo());
-		request.setAttribute("jibyoArea", bodyForm.getJibyoArea());
-		request.setAttribute("job", bodyForm.getJob());
+		request.setAttribute("name", prac5Form.getName());
+		request.setAttribute("kana", prac5Form.getKana());
+		request.setAttribute("height", prac5Form.getHeight());
+		request.setAttribute("weight", prac5Form.getWeight());
+		request.setAttribute("jibyo", prac5Form.getJibyo());
+		request.setAttribute("jibyoArea", prac5Form.getJibyoArea());
+		request.setAttribute("job", prac5Form.getJob());
 		StringBuffer sb = new StringBuffer();
-		String[] factor = bodyForm.getFactor();
+		String[] factor = prac5Form.getFactor();
 		for(int i=0; i<factor.length; i++) {
 			if(factor[i]!=null && !factor[i].equals("")) {
 				sb.append(factor[i]);
