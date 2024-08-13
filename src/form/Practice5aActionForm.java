@@ -9,9 +9,9 @@ public class Practice5aActionForm extends ActionForm {
 
 	private String name;		// 名前
 	private String kana;		// ヨミ
-	private String height;		// 身長
+	private String height="1";	// 身長
 	private String weight;		// 体重
-	private String jibyo;		// 持病
+	private String jibyo="1";	// 持病
 	private String jibyoArea;	// 病名
 	private String job;			// 職業
 	private String[] factor;	// 選択肢
@@ -29,7 +29,7 @@ public class Practice5aActionForm extends ActionForm {
 	public String[] getFactor() {return factor; }
 	// setter
 	public void setName(String name) { this.name = name; }
-	public void setKana(String yomi) { this.kana = kana; }
+	public void setKana(String kana) { this.kana = kana; }
 	public void setHeight(String height) { this.height = height; }
 	public void setWeight(String weight) { this.weight = weight; }
 	public void setJibyo(String jibyo) { this.jibyo = jibyo; }
@@ -43,8 +43,9 @@ public class Practice5aActionForm extends ActionForm {
 			HttpServletRequest request){
 			this.setName("");
 			this.setKana("");
-			this.setHeight("");
-			this.setJibyo("");
+			this.setHeight("1");
+			this.setHeight("0.0");
+			this.setJibyo("なし");
 			this.setJibyoArea("");
 			this.setJob("");
 			this.setFactor(new String[0]);
