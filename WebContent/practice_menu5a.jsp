@@ -19,12 +19,14 @@
 			<label for="kana">ヨミガナ</label>
 			<html:text property="kana" styleId="kana" /><br />
 			<label for="height">身長</label><br />
-			<html:radio property="height" value="1" >100cm ～ 120cm</html:radio><br />
-			<html:radio property="height" value="2">120cm ～ 140cm</html:radio><br />
-			<html:radio property="height" value="3">140cm ～ 160cm</html:radio><br />
-			<html:radio property="height" value="4">160cm ～ 180cm</html:radio><br />
-			<html:radio property="height" value="5">180cm ～ 200cm</html:radio><br />
+			<html:radio property="height" value="100cm ～ 120cm" >100cm ～ 120cm</html:radio><br />
+			<html:radio property="height" value="120cm ～ 140cm">120cm ～ 140cm</html:radio><br />
+			<html:radio property="height" value="140cm ～ 160cm">140cm ～ 160cm</html:radio><br />
+			<html:radio property="height" value="160cm ～ 180cm">160cm ～ 180cm</html:radio><br />
+			<html:radio property="height" value="180cm ～ 200cm">180cm ～ 200cm</html:radio><br />
 			<br />
+			<label for="name">体重</label>
+			<html:text property="weight" styleId="weight" /><br />
 			<label for="jibyo">持病</label>
 			<html:radio styleId="jibyo-ari" property="jibyo" value="あり">あり</html:radio>
 			<html:radio styleId="jibyo-nashi" property="jibyo" value="なし">なし</html:radio><br />

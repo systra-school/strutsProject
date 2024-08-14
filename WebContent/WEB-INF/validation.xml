@@ -56,6 +56,24 @@
                     </var>
             </field>
         </form>
+        
+        <form name="prac5aform">
+            <field property="name" depends="required">
+                    <arg key="prac5aform.name"/>
+            </field>
+            <field property="kana" depends="required">
+                    <arg key="prac5aform.kana"/>
+            </field>
+            <field property="weight" depends="required">
+                    <arg key="prac5aform.weight"/>
+            </field>
+            <field property="jibyo" depends="required">
+                    <arg key="prac5aform.jibyo"/>
+            </field>
+            <field property="job" depends="required">
+                    <arg key="prac5aform.job"/>
+            </field>
+        </form>
 
     </formset>
 

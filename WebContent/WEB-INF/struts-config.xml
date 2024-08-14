@@ -48,15 +48,19 @@
 	<form-bean
 		name="prac3form"
 		type="form.Practice3ActionForm" />
+	<!-- 動かしてみよう④ -->
 	<form-bean
 		name="prac4form"
 		type="form.Practice4ActionForm" />
+	<!-- 課題４ -->
 	<form-bean
 		name="loginform"
 		type="form.LoginActionForm" />
+	<!-- 動かしてみよう⑤ -->
 	<form-bean
 		name="prac5form"
 		type="form.Practice5ActionForm" />
+	<!-- 課題５ -->
 	<form-bean
 		name="prac5aform"
 		type="form.Practice5aActionForm" />

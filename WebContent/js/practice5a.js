@@ -6,7 +6,7 @@ const kana = document.querySelector('#kana');				// カナ
 const weight = document.querySelector('#weight');			// 体重
 const jibyo_ari = document.querySelector('#jibyo-ari');		// 持病あり
 const jibyo_nashi = document.querySelector('#jibyo-nashi');	// 持病なし
-const jibyoArea = document.querySelector('#jibyoArea');		// 病名
+const jibyoArea = document.forms('#jibyoArea');		// 病名
 //const job = document.querySelector('#job');				// 職業
 const factor = document.querySelector('#factor');			// 選択肢
 const ok = document.querySelector('#ok');					// OKボタン
@@ -15,6 +15,8 @@ let cnt = 0;
 
 // 初期表示時
 window.addEventListener('DOMContentLoaded', function(){
+	name.value = '';
+	kana.value = '';
 	inputCheck(jibyo.value);
 })
 

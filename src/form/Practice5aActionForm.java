@@ -8,7 +8,7 @@ import org.apache.struts.action.ActionMapping;
 public class Practice5aActionForm extends ActionForm {
 
 	private String name;		// 名前
-	private String kana;		// ヨミ
+	private String kana;		// カナ
 	private String height="1";	// 身長
 	private String weight;		// 体重
 	private String jibyo="1";	// 持病
