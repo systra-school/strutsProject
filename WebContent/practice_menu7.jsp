@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="html" uri="http://struts.apache.org/tags-html"%>
 <%@ taglib prefix="bean" uri="http://struts.apache.org/tags-bean"%>
-<%@ page import="bean.Practice7DataList" %>
+<%@ page import="beans.Practice7DataList" %>
 <!DOCTYPE html>
 <bean:define id="dataList" name="dataList" scope="session" type="bean.Practice7DataList" />
 <html:html>
